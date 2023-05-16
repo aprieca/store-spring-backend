@@ -1,0 +1,12 @@
+2023-05-16 11:14:44 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ITEMS: ""ID"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."ITEMS"("ID","DESCRIPTION","IMAGE","NAME","PRICE","CATEGORY_ID")VALUES(?,?,?,?,?,?) [22018-214]
+2023-05-16 11:14:44 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ITEMS: ""ID"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."ITEMS"("ID","DESCRIPTION","IMAGE","NAME","PRICE","CATEGORY_ID")VALUES(?,?,?,?,?,?) [22018-214]
+2023-05-16 11:15:07 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ITEMS: ""ID"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."ITEMS"("ID","DESCRIPTION","IMAGE","NAME","PRICE","CATEGORY_ID")VALUES(?,?,?,?,?,?) [22018-214]
+2023-05-16 11:15:07 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ITEMS: ""ID"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."ITEMS"("ID","DESCRIPTION","IMAGE","NAME","PRICE","CATEGORY_ID")VALUES(?,?,?,?,?,?) [22018-214]
