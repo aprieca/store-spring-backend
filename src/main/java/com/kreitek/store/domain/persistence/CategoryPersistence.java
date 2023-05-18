@@ -13,4 +13,6 @@ public interface CategoryPersistence {
     Category insertCategory(Category category);
 
     void deleteCategory(Long categoryId);
+
+    List<Category> getCategoriesByName(String partialName);
 }

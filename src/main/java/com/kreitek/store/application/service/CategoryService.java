@@ -13,4 +13,6 @@ public interface CategoryService {
     CategoryDTO insertCategory(CategoryDTO categoryDto);
 
     void deleteCategory(Long categoryId);
+
+    List<CategoryDTO> getAllCategoriesByName(String partialName);
 }

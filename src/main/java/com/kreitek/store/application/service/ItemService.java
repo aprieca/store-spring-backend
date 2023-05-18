@@ -1,7 +1,8 @@
 package com.kreitek.store.application.service;
 
 import com.kreitek.store.application.dto.ItemDTO;
-import com.kreitek.store.domain.entity.Item;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,4 +17,5 @@ public interface ItemService {
     ItemDTO insertItem(ItemDTO itemId);
 
     void deleteItem(Long itemId);
+    Page<ItemDTO> getItemsByCriteriaStringPaged(Pageable pageable, String filter);
 }
