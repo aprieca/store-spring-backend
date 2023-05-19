@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class CategoryRestController {
@@ -33,11 +34,36 @@ public class CategoryRestController {
 
     }
 
+    @CrossOrigin
+    @DeleteMapping(value = "categories/{categoryId}")
+    ResponseEntity<?> deleteCategory(@PathVariable Long categoryId) {
+        this.categoryService.deleteCategory(categoryId);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 
     @CrossOrigin
     @PostMapping(value = "/categories", produces = "application/json", consumes = "application/json")
     ResponseEntity<CategoryDTO> insertCategory(@RequestBody CategoryDTO categoryDTO) {
         categoryDTO = this.categoryService.insertCategory(categoryDTO);
         return new ResponseEntity<>(categoryDTO, HttpStatus.CREATED);
+    }
+
+    @CrossOrigin
+    @PatchMapping(value = "/categories", produces = "application/json", consumes = "application/json")
+    ResponseEntity<CategoryDTO> updateCategory(@RequestBody CategoryDTO categoryDTO) {
+        CategoryDTO categoryUpdated = this.categoryService.insertCategory(categoryDTO);
+        return new ResponseEntity<>(categoryUpdated, HttpStatus.OK);
+    }
+
+    @CrossOrigin
+    @GetMapping(value = "categories/{categoryId}")
+    ResponseEntity<CategoryDTO> getCategoryById(@PathVariable Long categoryId) {
+        Optional<CategoryDTO> category = this.categoryService.getCategoryById(categoryId);
+        if (category.isPresent()) {
+            return new ResponseEntity<>(category.get(),HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
     }
 }
